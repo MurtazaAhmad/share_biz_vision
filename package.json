@@ -6,11 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "format": "eslint . --fix"
   },
   "dependencies": {
     "mongoose": "^7.6.3",
-    "next": "latest",
+    "next": "^13.5.6",
     "react": "latest",
     "react-dom": "latest"
   },
@@ -18,7 +19,10 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
     "autoprefixer": "latest",
+    "eslint": "^8.52.0",
+    "eslint-config-next": "^13.5.6",
     "postcss": "latest",
     "tailwindcss": "latest",
     "typescript": "latest"
