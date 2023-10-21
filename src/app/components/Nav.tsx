@@ -17,7 +17,8 @@ const Nav = () => {
               type="button"
               className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
-              aria-expanded="false">
+              aria-expanded="false"
+            >
               <span className="absolute -inset-0.5"></span>
               <span className="sr-only">Open main menu</span>
               <svg
@@ -26,7 +27,8 @@ const Nav = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                aria-hidden="true">
+                aria-hidden="true"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -39,7 +41,8 @@ const Nav = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                aria-hidden="true">
+                aria-hidden="true"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -61,12 +64,14 @@ const Nav = () => {
                 <Link
                   href="/"
                   className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                  aria-current="page">
+                  aria-current="page"
+                >
                   Home
                 </Link>
                 <Link
                   href="/ideas"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >
                   Ideas
                 </Link>
               </div>
@@ -89,13 +94,15 @@ const Nav = () => {
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="user-menu-button"
-                    tabIndex={-1}>
+                    tabIndex={-1}
+                  >
                     <a
                       href="#"
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabIndex={-1}
-                      id="user-menu-item-0">
+                      id="user-menu-item-0"
+                    >
                       Your Profile
                     </a>
                     <a
@@ -103,7 +110,8 @@ const Nav = () => {
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabIndex={-1}
-                      id="user-menu-item-1">
+                      id="user-menu-item-1"
+                    >
                       Settings
                     </a>
                     <a
@@ -111,7 +119,8 @@ const Nav = () => {
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabIndex={-1}
-                      id="user-menu-item-2">
+                      id="user-menu-item-2"
+                    >
                       Sign out
                     </a>
                   </div>
@@ -120,7 +129,8 @@ const Nav = () => {
             ) : (
               <a
                 href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              >
                 Create Account
               </a>
             )}
@@ -133,22 +143,26 @@ const Nav = () => {
           <a
             href="#"
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-            aria-current="page">
+            aria-current="page"
+          >
             Dashboard
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >
             Team
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >
             Projects
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >
             Calendar
           </a>
         </div>
