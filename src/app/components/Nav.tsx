@@ -5,8 +5,7 @@ import Link from "next/link";
 
 const Nav = () => {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn] = useState(false);
 
   return (
     <nav className="bg-gray-800">
