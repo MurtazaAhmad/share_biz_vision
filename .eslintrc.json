@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-unused-vars": "off",
+    "import/no-unresolved": "error",
+    "import/order": "error",
+    "import/no-duplicates": "error",
+    "import/named": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/no-unescaped-entities": 0
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": [
+    "functional-test/*",
+    "coverage/**/*",
+    ".eslintrc.js",
+    "next.config.js",
+    "next-env.d.ts",
+    "lib/**/*",
+    "postcss.config.js"
+  ]
+}
