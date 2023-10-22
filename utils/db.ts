@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
 
-const isConnected = false;
+let isConnected = false;
+const { MONGO_URI } = process.env;
 
 export const connectDB = async () => {
-  mongoose.set("strictQuery", true); //Warnings in console if not set.
+  // Warnings in console if not set.
+  mongoose.set("strictQuery", true);
 
   //   If Already Connected.
   if (isConnected) {
@@ -12,14 +14,15 @@ export const connectDB = async () => {
   }
 
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
+    if (!MONGO_URI) throw new Error("Mongo URI not found");
+    const conn = await mongoose.connect(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-    });
+    } as mongoose.ConnectOptions);
 
     isConnected = true;
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
-    console.error(`Error: ${error.message}`);
+    console.error(`Error: ${(error as Error).message}`);
   }
 };
