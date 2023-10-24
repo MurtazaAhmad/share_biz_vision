@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const Nav = () => {
+  const { theme, setTheme } = useTheme();
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [isLoggedIn] = useState(false);
+  const [isLoggedIn] = useState(true);
 
   return (
     <nav className="bg-gray-800">
@@ -51,13 +53,6 @@ const Nav = () => {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              />
-            </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 <Link
@@ -128,21 +123,44 @@ const Nav = () => {
             ) : (
               <a
                 href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="hidden sm:block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
               >
                 Create Account
               </a>
             )}
+
+            <div className="form-control w-52">
+              <label className="cursor-pointer label justify-end md:justify-start">
+                <input
+                  checked={theme === "dark"}
+                  onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  type="checkbox"
+                  className="toggle toggle-primary toggle-sm"
+                />
+              </label>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="sm:hidden" id="mobile-menu">
+      <div
+        style={{
+          border: "5px solid red",
+        }}
+        className="sm:hidden"
+        id="mobile-menu"
+      >
         <div className="space-y-1 px-2 pb-3 pt-2">
           <a
             href="#"
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
+          >
+            Create Account
+          </a>
+          <a
+            href="#"
+            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Dashboard
           </a>
