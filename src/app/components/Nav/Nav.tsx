@@ -8,7 +8,7 @@ const Nav = () => {
   const { theme, setTheme } = useTheme();
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLoggedIn] = useState(true);
+  const [isLoggedIn] = useState(false);
 
   return (
     <nav className="bg-gray-800">
@@ -130,17 +130,6 @@ const Nav = () => {
                 Create Account
               </a>
             )}
-
-            <div className="form-control w-52">
-              <label className="cursor-pointer label justify-end md:justify-start">
-                <input
-                  checked={theme === "dark"}
-                  onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  type="checkbox"
-                  className="toggle toggle-primary toggle-sm"
-                />
-              </label>
-            </div>
           </div>
         </div>
       </div>
